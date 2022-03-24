@@ -5,6 +5,8 @@ import BnbCircle from '../../assets/img/bnb-circle.png'
 import { ethers } from "ethers";
 import $ from 'jquery'
 import { connectWallet } from '../../../../wallet';
+import Footer from '../Footer/Footer';
+import './header.css'
 let jQuery = $
 let ethereum = ethers
 export default function Header() {
@@ -26,6 +28,32 @@ export default function Header() {
                             <a href="#invest" className="main-content__btn main-btn main-btn_blue scroll-link">
                                 Invest now
                             </a>
+                            {/* added here  */}
+                            <div >
+                            <ul className="linkList">
+                                <li >
+                                    <a href="https://bnbmoney.app/static/media/wp.4687c56a.pdf"  target="_blank">
+                                        Whitepaper
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://bscscan.com/address/0x6269df1321fcec2c5aba171436396628016e74a0"  target="_blank">
+                                        Contract
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://bnbmoney.app/bnbmoney.app.pdf" >
+                                        Audit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://t.me/bnbmoneyapp" >
+                                        Chat
+                                    </a>
+                                </li>
+                            </ul>
+                            </div>
+                            {/* added here  */}
                         </div>
                         <div className="main-image">
                             <picture>

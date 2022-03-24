@@ -13,10 +13,10 @@ export default function Home() {
     <div>
       <Navbar />
       <Header />
-      <About />
       <Invest />
       <Affiliate />
       <Faq />
+      <About />
       <Footer />
     </div>
   )

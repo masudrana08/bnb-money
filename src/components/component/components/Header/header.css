@@ -1,0 +1,15 @@
+.linkList{
+  display: flex;
+  margin-top: 30px;
+}
+.linkList li{
+  background-color: #FDECC5;
+  margin: 0 10px;
+  padding: 9px 30px;
+  border-radius: 15px;
+}
+.linkList a{
+  text-decoration: none;
+  color: #CB8A15;
+  font-weight: bold;
+}

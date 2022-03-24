@@ -41,8 +41,27 @@
   color: rgb(19, 18, 18)
 }
 
+.invite__rightTop{
+  background-image: url(../../assets/img/invitebg.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+}
+.invite__rightTop .left{
+  color: white;
+}
+.invite__wallet button{
+  color: white;
+  background-color: blueviolet;
+  border-radius: 10px;
+  padding: 15px 30px;
 
-
+}
 
 .account__left > div{
   display: flex;

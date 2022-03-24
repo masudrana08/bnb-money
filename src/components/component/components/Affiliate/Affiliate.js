@@ -1,6 +1,10 @@
 import React from 'react'
-
+import './affiliate.css'
 export default function Affiliate() {
+    const handleCopy = () =>{
+        const text = document.getElementById('referralLink')
+        navigator.clipboard.writeText(text.value)
+    }
   return (
     <div>
       <section className="program" id="program">
@@ -16,7 +20,11 @@ export default function Affiliate() {
                                 <p className="program-referal__point">
                                     Your referral link:
                                 </p>
-                                <input id="referralLink" type="text" name="referal" className="program-referal__input" required/>
+                                <div className="affiliate__input">
+
+                                <input id="referralLink" type="text" name="referal"  required/>
+                                <button onClick={handleCopy}>Copy</button>
+                                </div>
                             </div>
                             <div className="program-referal">
                                 <p className="program-referal__point">

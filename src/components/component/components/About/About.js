@@ -13,7 +13,7 @@ export default function About() {
                         <li className="advantages-list__item">
                             <div className="section-title">
                                 <h2>
-                                    You need to work with BNB-Profit, because:
+                                    The best way to earn bnb:
                                 </h2>
                             </div>
                         </li>
@@ -26,7 +26,7 @@ export default function About() {
                                     Transparent & Secured
                                 </h3>
                                 <p className="advantages-list__text">
-                                    An open source code that is 100% transparent and fair to all its participants, the code can't be modified
+                                    Tested and Verified by InterFl Canda: fair, stable and reliable project you can trust to
                                 </p>
                             </div>
                         </li>
@@ -36,10 +36,10 @@ export default function About() {
                             </div>
                             <div className="advantages-list__content">
                                 <h3 className="advantages-list__title">
-                                    Crazy Profit
+                                    Income Start from 10% per day
                                 </h3>
                                 <p className="advantages-list__text">
-                                    From your deposit you will receive 7% per day, for 30 days
+                                    From your deposit you will receive 10% per day, for 30 days
                                 </p>
                             </div>
                         </li>
@@ -49,10 +49,10 @@ export default function About() {
                             </div>
                             <div className="advantages-list__content">
                                 <h3 className="advantages-list__title">
-                                    Easy Start
+                                    Automatic User Insurrance
                                 </h3>
                                 <p className="advantages-list__text">
-                                    Get started with just 0.05 BNB, no maximum deposit limit.
+                                    A special standalone contract guards the Project against balance draining and project (only project in the market) last investors as well
                                 </p>
                             </div>
                         </li>
@@ -62,7 +62,7 @@ export default function About() {
                             </div>
                             <div className="advantages-list__content">
                                 <h3 className="advantages-list__title">
-                                    Affiliate Program
+                                    5 Level referral program
                                 </h3>
                                 <p className="advantages-list__text">
                                     With the affiliate program, you can earn an additional 10,25% for 5 levels from your referrals.

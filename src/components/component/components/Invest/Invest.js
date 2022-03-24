@@ -172,7 +172,7 @@ export default function Invest() {
                     <Col md={4} className='invest__left'>
                         <div className='goalCont'>
                             <div>
-                                <img style={{ width: '60px'}} src={Goal} alt="" />
+                                <img style={{ width: '60px' }} src={Goal} alt="" />
                             </div>
                             <div className='d-flex'>
                                 <button className='prepend__btn'>BNB</button>
@@ -192,7 +192,7 @@ export default function Invest() {
                         </div>
                         <div>
                             <div>
-                                <img style={{ width: '60px'}} src={Earning} alt="" />
+                                <img style={{ width: '60px' }} src={Earning} alt="" />
                             </div>
                             <div>
                                 <p className='invest__subtitle'>Total Profit</p>
@@ -216,6 +216,15 @@ export default function Invest() {
                         </div>
                     </Col>
                     <Col md={8}>
+                        <Row className='invite__rightTop'>
+                            <Col xs={6} className='left'>
+                                <h4 style={{fontWeight:'bold', marginBottom:'9px'}}>Stable & Profitable Yield Farming Dapp</h4>
+                                <p> With Automated Users Insurance to protect late investors as well</p>
+                            </Col>
+                            <Col md={3} className='invite__wallet'>
+                                <button onClick={e => fetchUserData()} >Connect Wallet</button>
+                            </Col>
+                        </Row>
                         <div>
                             <h3 style={{ fontWeight: 'bold', marginBottom: '20px' }}> YOUR ACCOUNT </h3>
                         </div>
@@ -268,15 +277,15 @@ export default function Invest() {
                                 </div>
                             </Col>
                         </Row>
-                        <Row style={{columnGap:'20px'}} >
+                        <Row style={{ columnGap: '20px' }} >
                             <h5 className="invest__number mb-3">Lifetime Returns</h5>
                             <Col md={5}>
                                 <div className='d-flex justify-content-between'>
-                                    <h6 style={{fontWeight:'600'}}>Total Stake Volume</h6>
+                                    <h6 style={{ fontWeight: '600' }}>Total Stake Volume</h6>
                                     <p className='invest__subtitle mb-2'>4%</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
-                                    <h6 style={{fontWeight:'600'}}>Total Reinvestment Volume</h6>
+                                    <h6 style={{ fontWeight: '600' }}>Total Reinvestment Volume</h6>
                                     <p className='invest__subtitle mb-2'>13%</p>
                                 </div>
                                 <div className='d-flex justify-content-between mt-3'>
@@ -285,12 +294,12 @@ export default function Invest() {
                                 </div>
                             </Col>
                             <Col md={5}>
-                            <div className='d-flex justify-content-between'>
-                                    <h6 style={{fontWeight:'600'}}>Total Claim Reward</h6>
+                                <div className='d-flex justify-content-between'>
+                                    <h6 style={{ fontWeight: '600' }}>Total Claim Reward</h6>
                                     <p className='invest__subtitle mb-2'>100.98 BNB</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
-                                    <h6 style={{fontWeight:'600'}}>Contract Balance</h6>
+                                    <h6 style={{ fontWeight: '600' }}>Contract Balance</h6>
                                     <p className='invest__subtitle mb-2'>187.85 BNB</p>
                                 </div>
                                 <div className='d-flex justify-content-between mt-3'>
