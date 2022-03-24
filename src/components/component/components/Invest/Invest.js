@@ -10,6 +10,7 @@ import Goal from '../../assets/img/goal.svg'
 import NetWorth from '../../assets/img/networth.svg'
 import Earning from '../../assets/img/earning.svg'
 import Loss from '../../assets/img/loss.svg'
+import Meter from '../../assets/img/speedometer.png'
 
 
 
@@ -176,7 +177,7 @@ export default function Invest() {
                             <div className='d-flex'>
                                 <button className='prepend__btn'>BNB</button>
                                 <input onChange={e => setAmount(e.target.value)} id="investAmount" type="number" name="invest" placeholder="500" step="" value={amount} />
-                                
+
                             </div>
                         </div>
                         <div>
@@ -205,7 +206,7 @@ export default function Invest() {
                             </div>
                             <div>
                                 <p className='invest__subtitle'>In 30 days, You'll Earn</p>
-                                <h3 className="invest__number">{amount*3} BNB</h3>
+                                <h3 className="invest__number">{amount * 3} BNB</h3>
                             </div>
                         </div>
                         <div>
@@ -215,7 +216,49 @@ export default function Invest() {
                         </div>
                     </Col>
                     <Col md={8}>
-                        right
+                        <div>
+                            <h3 style={{fontWeight:'bold', marginBottom:'20px'}}> YOUR ACCOUNT </h3>
+                        </div>
+                        <Row>
+                            <Col className='account__left' md={6}>
+                                <div>
+                                    <div>
+                                        <p className='invest__subtitle mb-2'>Individual Account</p>
+                                        <h4 className="invest__number">Build Wealth</h4>
+                                    </div>
+                                    <div>
+                                        <p className='invest__subtitle mb-2'>Current Balance</p>
+                                        <h4 className="invest__number">$1248.90</h4>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <button className='claim__button' onClick={e => { claim() }}>Claim</button>
+                                    </div>
+                                    <div>
+                                        <p className='invest__subtitle mb-2'>BNB to Claim</p>
+                                        <h4 className="invest__number">130,000</h4>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 className="invest__number">Your Goal</h6>
+                                </div>
+                                <div className='justify-content-between'>
+                                    <p className="invest__subtitle">What you have invested</p>
+                                    <h6 className='invest__number'>$1000.00</h6>
+                                </div>
+                                <div className='justify-content-between'>
+                                    <p className="invest__subtitle">What you have earned</p>
+                                    <h6 className='invest__number'>$3000.00</h6>
+                                </div>
+                            </Col>
+                            <Col className='account__right' md={6}>
+                                <div></div>
+                                <div>
+                                    <img style={{width:'100%'}} src={Meter} alt="" />
+                                </div>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </div>

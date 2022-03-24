@@ -38,4 +38,22 @@
 }
 .invest__number{
   font-weight: 700;
+  color: rgb(19, 18, 18)
+}
+
+
+
+
+.account__left > div{
+  display: flex;
+  column-gap: 30px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.claim__button{
+  background-color: rgba(55, 202, 26, 0.2);
+  color: #37ca1ac7;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 15px 30px
 }
