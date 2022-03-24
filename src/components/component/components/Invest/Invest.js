@@ -217,11 +217,11 @@ export default function Invest() {
                     </Col>
                     <Col md={8}>
                         <div>
-                            <h3 style={{fontWeight:'bold', marginBottom:'20px'}}> YOUR ACCOUNT </h3>
+                            <h3 style={{ fontWeight: 'bold', marginBottom: '20px' }}> YOUR ACCOUNT </h3>
                         </div>
                         <Row>
-                            <Col className='account__left' md={6}>
-                                <div>
+                            <Col className='account__left ' md={6}>
+                                <div className='mb-5'>
                                     <div>
                                         <p className='invest__subtitle mb-2'>Individual Account</p>
                                         <h4 className="invest__number">Build Wealth</h4>
@@ -252,15 +252,56 @@ export default function Invest() {
                                     <h6 className='invest__number'>$3000.00</h6>
                                 </div>
                             </Col>
-                            <Col className='account__right' md={6}>
-                                <div></div>
+                            <Col className='account__right mx-auto' md={5}>
+                                <div className='d-flex justify-content-between'>
+                                    <div>
+                                        <p className='invest__subtitle mb-2'>Daily Return</p>
+                                        <h4 className="invest__number">10%</h4>
+                                    </div>
+                                    <div>
+                                        <p className='invest__subtitle mb-2'>Total Profit</p>
+                                        <h4 className="invest__number">300%</h4>
+                                    </div>
+                                </div>
                                 <div>
-                                    <img style={{width:'100%'}} src={Meter} alt="" />
+                                    <img style={{ width: '100%', marginTop: '20px' }} src={Meter} alt="" />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <h5 className="invest__number mb-3">Lifetime Returns</h5>
+                            <Col md={6}>
+                                <div className='d-flex justify-content-between'>
+                                    <h6 style={{fontWeight:'600'}}>Total Stake Volume</h6>
+                                    <p className='invest__subtitle mb-2'>4%</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <h6 style={{fontWeight:'600'}}>Total Reinvestment Volume</h6>
+                                    <p className='invest__subtitle mb-2'>13%</p>
+                                </div>
+                                <div className='d-flex justify-content-between mt-3'>
+                                    <h6 className='invest__number'>Auto Deposite on May 25</h6>
+                                    <p className='invest__subtitle mb-2'>250 BNB</p>
+                                </div>
+                            </Col>
+                            <Col md={6}>
+                            <div className='d-flex justify-content-between'>
+                                    <h6 style={{fontWeight:'600'}}>Total Claim Reward</h6>
+                                    <p className='invest__subtitle mb-2'>100.98 BNB</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <h6 style={{fontWeight:'600'}}>Contract Balance</h6>
+                                    <p className='invest__subtitle mb-2'>187.85 BNB</p>
+                                </div>
+                                <div className='d-flex justify-content-between mt-3'>
+                                    <h6 className='invest__number'>Insurance Pool</h6>
+                                    <p className='invest__subtitle mb-2'>987.85 BNB</p>
                                 </div>
                             </Col>
                         </Row>
                     </Col>
                 </Row>
+
             </div>
         </div>
     )

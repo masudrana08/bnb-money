@@ -1367,7 +1367,7 @@ p.text {
   transform: translateY(-50%);
   content: "";
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-weight: 700;
   color: #3b368c;
 }
 .faq .faq-box .accordion .accordion-item .accordion-header button.accordion-button[aria-expanded=true]:before {
