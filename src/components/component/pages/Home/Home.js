@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import Invest from '../../components/Invest/Invest'
 import Navbar from '../../components/Navbar/Navbar'
+// import Account from '../../components/Account/Account'
 
 export default function Home() {
   return (

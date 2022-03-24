@@ -4,6 +4,14 @@ import Web3 from "web3"
 import Contract from 'web3-eth-contract';
 import { ethers } from "ethers";
 import { connectWallet, getWalletAddressOrConnect } from '../../../../wallet';
+import './invest.css'
+import { Row, Col } from 'react-bootstrap'
+import Goal from '../../assets/img/goal.svg'
+import NetWorth from '../../assets/img/networth.svg'
+import Earning from '../../assets/img/earning.svg'
+import Loss from '../../assets/img/loss.svg'
+
+
 
 var decimal = 1e18;
 const abi = require('./abi.json')
@@ -18,7 +26,7 @@ export default function Invest() {
     const [userWithdrawn, setUserWithdrawn] = useState(0)
     const [income, setIncome] = useState(0)
     const [refReword, setRefReword] = useState(0)
-    const [amount, setAmount] = useState(0)
+    const [amount, setAmount] = useState(500)
     const bnbRate = 407.3593
     var contract
     useEffect(async () => {
@@ -157,125 +165,182 @@ export default function Invest() {
         alert("Reward claimed !")
     }
     return (
-        <div>
-            <section className="invest" id="invest">
-                <div className="container">
-                    <div className="section-title" style={{ display: 'flex', alignItems: 'center', columnGap: '20px' }}>
-                        <h2 onClick={e => fetchContractData()}>
-                            TIME to INVEST
-                        </h2>
-                        <img style={{ width: '3.5rem' }} src={Bnb} alt="" />
-                    </div>
-                    <div className="invest-block f-jcsb">
-                        <div className="invest-wrap">
-                            <ul className="invest-list">
-                                <li className="invest-list__item">
-                                    <h3 className="invest-list__title">
-                                        Total Invested
-                                    </h3>
-                                    <p className="invest-list__value"><span id="totalInvested"></span>
-                                        {totalInvested}BNB
-                                    </p>
-                                    <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
-                                        {bnbRate !== null ? totalInvested * bnbRate : ''}$
-                                    </p>
-                                </li>
-                                <li className="invest-list__item">
-                                    <h3 className="invest-list__title">
-                                        Total Withdrawals
-                                    </h3>
-                                    <p className="invest-list__value"><span id="totalWithdrawals"></span>
-                                        {totalWithdrawals}BNB
-                                    </p>
-                                    <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
-                                        {bnbRate !== null ? totalWithdrawals * bnbRate : ''}$
-                                    </p>
-                                </li>
-                                <button id="connect_btn" className="btn btn-primary main-btn main-btn_blue" onClick={e => fetchUserData()} >Connect Wallet</button>
-                            </ul>
-                            <div className="invest-bottom">
-                                <div className="invest-connect">
-                                    <span className="invest-connect__token f-center-center">
-                                        BNB
-                                    </span>
+        <div className='invest' id='invest'>
+            <div className="container">
+                <Row>
+                    <Col md={4} className='invest__left'>
+                        <div className='goalCont'>
+                            <div>
+                                <img style={{ width: '60px', background: 'rgba(31, 105, 255, 0.1)', padding: '5px', borderRadius: '10px' }} src={Goal} alt="" />
+                            </div>
+                            <div className='d-flex'>
+                                <button className='prepend__btn'>BNB</button>
+                                <input onChange={e => setAmount(e.target.value)} id="investAmount" type="number" name="invest" placeholder="500" step="" value={amount} />
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img style={{ width: '60px', background: 'rgba(4, 196, 14, 0.1)', padding: '8px', borderRadius: '10px' }} src={NetWorth} alt="" />
+                            </div>
+                            <div>
+                                <p className='invest__subtitle'>Daily ROI</p>
+                                <h3 className="invest__number">10%</h3>
+                            </div>
 
-                                    <input onChange={e => setAmount(e.target.value)} id="investAmount" type="number" name="invest" placeholder="500" step="" />
-                                    <button onClick={e => { invest() }} className="main-btn main-btn_blue invest-connect__btn">
-                                        Invest Now
-                                    </button>
-                                </div>
-                                <p className="invest-text">
-                                    * 0.05 BNB Minimum Deposit
-                                </p>
+                        </div>
+                        <div>
+                            <div>
+                                <img style={{ width: '60px', background: 'rgba(232, 9, 43, 0.1)', padding: '8px', borderRadius: '10px' }} src={Earning} alt="" />
+                            </div>
+                            <div>
+                                <p className='invest__subtitle'>Total Profit</p>
+                                <h3 className="invest__number">300%</h3>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div>
+                                <img style={{ width: '60px', background: 'rgba(9, 20, 232, 0.1)', padding: '8px', borderRadius: '10px' }} src={Loss} alt="" />
+                            </div>
+                            <div>
+                                <p className='invest__subtitle'>In 30 days, You'll Earn</p>
+                                <h3 className="invest__number">{amount*3} BNB</h3>
                             </div>
                         </div>
-                        <div className="invest-wrap">
-                            <ul className="invest-list invest-list_accent">
-                                <li className="invest-list__item">
-                                    <h3 className="invest-list__title">
-                                        Your Total Deposits
-                                    </h3>
-                                    <p className="invest-list__value"><span id="userInvested"></span>
-                                        {userInvested}  BNB
-                                    </p>
-                                    <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
-                                        {bnbRate !== null ? userInvested * bnbRate : ''}$
-                                    </p>
-                                </li>
-                                <li className="invest-list__item">
-                                    <h3 className="invest-list__title">
-                                        Your Withdrawals
-                                    </h3>
-                                    <p className="invest-list__value"><span id="userWithdrawn"></span>
-                                        {userWithdrawn} BNB
-                                    </p>
-                                    <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
-                                        {bnbRate !== null ? userWithdrawn * bnbRate : ''}$
-                                    </p>
-                                </li>
-                                <li className="invest-list__item">
-                                    <h3 className="invest-list__title">
-                                        Your Income
-                                    </h3>
-                                    <p className="invest-list__value"><span id="calculateReward"></span>
-                                        {income} BNB
-                                    </p>
-                                    <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
-                                        {bnbRate !== null ? income * bnbRate : ''}$
-                                    </p>
-                                </li>
-                                <li className="invest-list__item">
-                                    <h3 className="invest-list__title">
-                                        Referral Rewards
-                                    </h3>
-                                    <p className="invest-list__value"><span id="totalUserRefsAmount"></span>
-                                        {totalRefsAmount} BNB
-                                    </p>
-                                    <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
-                                        {bnbRate !== null ? totalRefsAmount * bnbRate : ''}$
-                                    </p>
-                                </li>
-                            </ul>
-                            <div className="invest-bottom">
-                                <div className="invest-offer f-center">
-                                    <button onClick={e => { claim() }} type="button" className="main-btn">
-                                        Claim
-                                    </button>
-                                </div>
-                                <p className="invest-text">
-                                    * 0.05 BNB Minimum Amount
-                                </p>
-                            </div>
+                        <div>
+                            <button className='stake__btn' onClick={e => { invest() }}>
+                                Stake
+                            </button>
                         </div>
-                    </div>
-                    <div className="invest-theme">
-                        Profit
-                    </div>
-                    {/* <div className="invest-circle rotate-circle">
-                        <img src={BnbCircle} alt="" />
-                    </div> */}
-                </div>
-            </section>
+                    </Col>
+                    <Col md={8}>
+                        right
+                    </Col>
+                </Row>
+            </div>
         </div>
     )
+    // return (
+    //     <div>
+    //         <section className="invest" id="invest">
+    //             <div className="container">
+    //                 <div className="section-title" style={{ display: 'flex', alignItems: 'center', columnGap: '20px' }}>
+    //                     <h2 onClick={e => fetchContractData()}>
+    //                         TIME to INVEST
+    //                     </h2>
+    //                     <img style={{ width: '3.5rem' }} src={Bnb} alt="" />
+    //                 </div>
+    //                 <div className="invest-block f-jcsb">
+    //                     <div className="invest-wrap">
+    //                         <ul className="invest-list">
+    //                             <li className="invest-list__item">
+    //                                 <h3 className="invest-list__title">
+    //                                     Total Invested
+    //                                 </h3>
+    //                                 <p className="invest-list__value"><span id="totalInvested"></span>
+    //                                     {totalInvested}BNB
+    //                                 </p>
+    //                                 <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
+    //                                     {bnbRate !== null ? totalInvested * bnbRate : ''}$
+    //                                 </p>
+    //                             </li>
+    //                             <li className="invest-list__item">
+    //                                 <h3 className="invest-list__title">
+    //                                     Total Withdrawals
+    //                                 </h3>
+    //                                 <p className="invest-list__value"><span id="totalWithdrawals"></span>
+    //                                     {totalWithdrawals}BNB
+    //                                 </p>
+    //                                 <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
+    //                                     {bnbRate !== null ? totalWithdrawals * bnbRate : ''}$
+    //                                 </p>
+    //                             </li>
+    //                             <button id="connect_btn" className="btn btn-primary main-btn main-btn_blue" onClick={e => fetchUserData()} >Connect Wallet</button>
+    //                         </ul>
+    //                         <div className="invest-bottom">
+    //                             <div className="invest-connect">
+    //                                 <span className="invest-connect__token f-center-center">
+    //                                     BNB
+    //                                 </span>
+
+    //                                 <input onChange={e => setAmount(e.target.value)} id="investAmount" type="number" name="invest" placeholder="500" step="" />
+    //                                 <button onClick={e => { invest() }} className="main-btn main-btn_blue invest-connect__btn">
+    //                                     Invest Now
+    //                                 </button>
+    //                             </div>
+    //                             <p className="invest-text">
+    //                                 * 0.05 BNB Minimum Deposit
+    //                             </p>
+    //                         </div>
+    //                     </div>
+    //                     <div className="invest-wrap">
+    //                         <ul className="invest-list invest-list_accent">
+    //                             <li className="invest-list__item">
+    //                                 <h3 className="invest-list__title">
+    //                                     Your Total Deposits
+    //                                 </h3>
+    //                                 <p className="invest-list__value"><span id="userInvested"></span>
+    //                                     {userInvested}  BNB
+    //                                 </p>
+    //                                 <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
+    //                                     {bnbRate !== null ? userInvested * bnbRate : ''}$
+    //                                 </p>
+    //                             </li>
+    //                             <li className="invest-list__item">
+    //                                 <h3 className="invest-list__title">
+    //                                     Your Withdrawals
+    //                                 </h3>
+    //                                 <p className="invest-list__value"><span id="userWithdrawn"></span>
+    //                                     {userWithdrawn} BNB
+    //                                 </p>
+    //                                 <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
+    //                                     {bnbRate !== null ? userWithdrawn * bnbRate : ''}$
+    //                                 </p>
+    //                             </li>
+    //                             <li className="invest-list__item">
+    //                                 <h3 className="invest-list__title">
+    //                                     Your Income
+    //                                 </h3>
+    //                                 <p className="invest-list__value"><span id="calculateReward"></span>
+    //                                     {income} BNB
+    //                                 </p>
+    //                                 <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
+    //                                     {bnbRate !== null ? income * bnbRate : ''}$
+    //                                 </p>
+    //                             </li>
+    //                             <li className="invest-list__item">
+    //                                 <h3 className="invest-list__title">
+    //                                     Referral Rewards
+    //                                 </h3>
+    //                                 <p className="invest-list__value"><span id="totalUserRefsAmount"></span>
+    //                                     {totalRefsAmount} BNB
+    //                                 </p>
+    //                                 <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#565454', marginTop: '10px' }}>
+    //                                     {bnbRate !== null ? totalRefsAmount * bnbRate : ''}$
+    //                                 </p>
+    //                             </li>
+    //                         </ul>
+    //                         <div className="invest-bottom">
+    //                             <div className="invest-offer f-center">
+    //                                 <button onClick={e => { claim() }} type="button" className="main-btn">
+    //                                     Claim
+    //                                 </button>
+    //                             </div>
+    //                             <p className="invest-text">
+    //                                 * 0.05 BNB Minimum Amount
+    //                             </p>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //                 <div className="invest-theme">
+    //                     Profit
+    //                 </div>
+    //                 {/* <div className="invest-circle rotate-circle">
+    //                     <img src={BnbCircle} alt="" />
+    //                 </div> */}
+    //             </div>
+    //         </section>
+    //     </div>
+    // )
 }

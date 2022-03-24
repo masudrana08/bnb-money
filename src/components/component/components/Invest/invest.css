@@ -1,0 +1,41 @@
+.invest__left > div{
+  display: flex;
+ margin-bottom: 20px;
+ column-gap: 20px;
+}
+.goalCont {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px!important;
+}
+.goalCont input{
+  border: 1px solid lightgray;
+  border-radius: 0 50px 50px 0;
+  padding: 10px;
+}
+.goalCont .prepend__btn{
+  border-radius: 50px 0 0 50px;
+  font-weight: bold;
+  background: rgba(31, 60, 166, 0.9);
+  color: white;
+  padding: 0 20px
+}
+.stake__btn{
+  /* background: #1F3CA6; */
+  background: #37ca1ac7;
+  font-weight: bold;
+  padding: 15px;
+  width: 50%;
+  color: white;
+  border-radius: 20px;
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+
+.invest__subtitle{
+  color: rgb(136, 136, 136);
+}
+.invest__number{
+  font-weight: 700;
+}
