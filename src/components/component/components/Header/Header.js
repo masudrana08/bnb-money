@@ -23,11 +23,11 @@ export default function Header() {
                                 Your Smart Investment Platform <span>in Web 3.0</span>
                             </p> */}
                             <p className="main-content__text" >
-                                Your Smart Investment <span>7% Daily for 30 Days</span>
+                                Your Smart Investment <span>10% Daily for 30 Days</span>
                             </p>
-                            <a href="#invest" className="main-content__btn main-btn main-btn_blue scroll-link">
+                            {/* <a href="#invest" className="main-content__btn main-btn main-btn_blue scroll-link">
                                 Invest now
-                            </a>
+                            </a> */}
                             {/* added here  */}
                             <div >
                             <ul className="linkList">

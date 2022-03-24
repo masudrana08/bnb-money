@@ -169,6 +169,20 @@ export default function Invest() {
         <div className='invest' id='invest'>
             <div className="container">
                 <Row>
+                    <Col md={4}></Col>
+                    <Col md={8}>
+                    <Row className='invite__rightTop'>
+                        <Col xs={6} className='left'>
+                            <h4 style={{ fontWeight: 'bold', marginBottom: '9px' }}>Stable & Profitable Yield Farming Dapp</h4>
+                            <p> With Automated Users Insurance to protect late investors as well</p>
+                        </Col>
+                        <Col md={3} className='invite__wallet'>
+                            <button onClick={e => fetchUserData()} >Connect Wallet</button>
+                        </Col>
+                    </Row>
+                    </Col>
+                </Row>
+                <Row>
                     <Col md={4} className='invest__left'>
                         <div className='goalCont'>
                             <div>
@@ -177,7 +191,6 @@ export default function Invest() {
                             <div className='d-flex'>
                                 <button className='prepend__btn'>BNB</button>
                                 <input onChange={e => setAmount(e.target.value)} id="investAmount" type="number" name="invest" placeholder="500" step="" value={amount} />
-
                             </div>
                         </div>
                         <div>
@@ -186,7 +199,7 @@ export default function Invest() {
                             </div>
                             <div>
                                 <p className='invest__subtitle'>Daily ROI</p>
-                                <h3 className="invest__number">10%</h3>
+                                <h3 className="invest__number">10% </h3>
                             </div>
 
                         </div>
@@ -216,21 +229,13 @@ export default function Invest() {
                         </div>
                     </Col>
                     <Col md={8}>
-                        <Row className='invite__rightTop'>
-                            <Col xs={6} className='left'>
-                                <h4 style={{fontWeight:'bold', marginBottom:'9px'}}>Stable & Profitable Yield Farming Dapp</h4>
-                                <p> With Automated Users Insurance to protect late investors as well</p>
-                            </Col>
-                            <Col md={3} className='invite__wallet'>
-                                <button onClick={e => fetchUserData()} >Connect Wallet</button>
-                            </Col>
-                        </Row>
+
                         <div>
                             <h3 style={{ fontWeight: 'bold', marginBottom: '20px' }}> YOUR ACCOUNT </h3>
                         </div>
                         <Row>
                             <Col className='account__left ' md={6}>
-                                <div className='mb-5'>
+                                <div className='mb-4'>
                                     <div>
                                         <p className='invest__subtitle mb-2'>Individual Account</p>
                                         <h4 className="invest__number">Build Wealth</h4>
@@ -250,7 +255,7 @@ export default function Invest() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h6 className="invest__number">Your Goal</h6>
+                                    <h4 className="invest__number">Your Goal</h4>
                                 </div>
                                 <div className='justify-content-between'>
                                     <p className="invest__subtitle">What you have invested</p>
@@ -278,7 +283,7 @@ export default function Invest() {
                             </Col>
                         </Row>
                         <Row style={{ columnGap: '20px' }} >
-                            <h5 className="invest__number mb-3">Lifetime Returns</h5>
+                            <h5 className="invest__number mb-3">The best way to Earn BNB</h5>
                             <Col md={5}>
                                 <div className='d-flex justify-content-between'>
                                     <h6 style={{ fontWeight: '600' }}>Total Stake Volume</h6>
@@ -288,10 +293,10 @@ export default function Invest() {
                                     <h6 style={{ fontWeight: '600' }}>Total Reinvestment Volume</h6>
                                     <p className='invest__subtitle mb-2'>13%</p>
                                 </div>
-                                <div className='d-flex justify-content-between mt-3'>
+                                {/* <div className='d-flex justify-content-between mt-3'>
                                     <h6 className='invest__number'>Auto Deposite on May 25</h6>
                                     <p className='invest__subtitle mb-2'>250 BNB</p>
-                                </div>
+                                </div> */}
                             </Col>
                             <Col md={5}>
                                 <div className='d-flex justify-content-between'>
@@ -302,10 +307,10 @@ export default function Invest() {
                                     <h6 style={{ fontWeight: '600' }}>Contract Balance</h6>
                                     <p className='invest__subtitle mb-2'>187.85 BNB</p>
                                 </div>
-                                <div className='d-flex justify-content-between mt-3'>
+                                {/* <div className='d-flex justify-content-between mt-3'>
                                     <h6 className='invest__number'>Insurance Pool</h6>
                                     <p className='invest__subtitle mb-2'>987.85 BNB</p>
-                                </div>
+                                </div> */}
                             </Col>
                         </Row>
                     </Col>
