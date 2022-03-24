@@ -6,11 +6,11 @@ import { ethers } from "ethers";
 import { connectWallet, getWalletAddressOrConnect } from '../../../../wallet';
 import './invest.css'
 import { Row, Col } from 'react-bootstrap'
-import Goal from '../../assets/img/goal.svg'
-import NetWorth from '../../assets/img/networth.svg'
-import Earning from '../../assets/img/earning.svg'
-import Loss from '../../assets/img/loss.svg'
-import Meter from '../../assets/img/speedometer.png'
+import Goal from '../../assets/img/invest1.png'
+import NetWorth from '../../assets/img/invest2.png'
+import Earning from '../../assets/img/invest3.png'
+import Loss from '../../assets/img/invest4.png'
+import Meter from '../../assets/img/speedmeter.png'
 
 
 
@@ -172,7 +172,7 @@ export default function Invest() {
                     <Col md={4} className='invest__left'>
                         <div className='goalCont'>
                             <div>
-                                <img style={{ width: '60px', background: 'rgba(31, 105, 255, 0.1)', padding: '5px', borderRadius: '10px' }} src={Goal} alt="" />
+                                <img style={{ width: '60px'}} src={Goal} alt="" />
                             </div>
                             <div className='d-flex'>
                                 <button className='prepend__btn'>BNB</button>
@@ -182,7 +182,7 @@ export default function Invest() {
                         </div>
                         <div>
                             <div>
-                                <img style={{ width: '60px', background: 'rgba(4, 196, 14, 0.1)', padding: '8px', borderRadius: '10px' }} src={NetWorth} alt="" />
+                                <img style={{ width: '60px' }} src={NetWorth} alt="" />
                             </div>
                             <div>
                                 <p className='invest__subtitle'>Daily ROI</p>
@@ -192,7 +192,7 @@ export default function Invest() {
                         </div>
                         <div>
                             <div>
-                                <img style={{ width: '60px', background: 'rgba(232, 9, 43, 0.1)', padding: '8px', borderRadius: '10px' }} src={Earning} alt="" />
+                                <img style={{ width: '60px'}} src={Earning} alt="" />
                             </div>
                             <div>
                                 <p className='invest__subtitle'>Total Profit</p>
@@ -202,7 +202,7 @@ export default function Invest() {
                         </div>
                         <div>
                             <div>
-                                <img style={{ width: '60px', background: 'rgba(9, 20, 232, 0.1)', padding: '8px', borderRadius: '10px' }} src={Loss} alt="" />
+                                <img style={{ width: '60px' }} src={Loss} alt="" />
                             </div>
                             <div>
                                 <p className='invest__subtitle'>In 30 days, You'll Earn</p>
@@ -268,9 +268,9 @@ export default function Invest() {
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
+                        <Row style={{columnGap:'20px'}} >
                             <h5 className="invest__number mb-3">Lifetime Returns</h5>
-                            <Col md={6}>
+                            <Col md={5}>
                                 <div className='d-flex justify-content-between'>
                                     <h6 style={{fontWeight:'600'}}>Total Stake Volume</h6>
                                     <p className='invest__subtitle mb-2'>4%</p>
@@ -284,7 +284,7 @@ export default function Invest() {
                                     <p className='invest__subtitle mb-2'>250 BNB</p>
                                 </div>
                             </Col>
-                            <Col md={6}>
+                            <Col md={5}>
                             <div className='d-flex justify-content-between'>
                                     <h6 style={{fontWeight:'600'}}>Total Claim Reward</h6>
                                     <p className='invest__subtitle mb-2'>100.98 BNB</p>
