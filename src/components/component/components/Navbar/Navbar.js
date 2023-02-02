@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from '../../assets/img/logo.png'
-import PdfFile from '../../assets/docs/wp.pdf'
 export default function Navbar() {
     return (
         <div>
@@ -12,31 +11,28 @@ export default function Navbar() {
                         </div>
                         <nav className="header-nav">
                             <ul className="header-menu f-center">
-                                <li className="header-menu__item">
-                                    <a href="#safety" className="header-menu__link scroll-link">
-                                        Safety
-                                    </a>
-                                </li>
+                                
                                 <li className="header-menu__item">
                                     <a href="#invest" className="header-menu__link scroll-link">
                                         Investment
                                     </a>
                                 </li>
-                                <li className="header-menu__item">
-                                    <a href="#program" className="header-menu__link scroll-link">
-                                        Affiliate Program
-                                    </a>
-                                </li>
+                               
                                 <li className="header-menu__item">
                                     <a href="#faq" className="header-menu__link scroll-link">
                                         FAQ
+                                    </a>
+                                </li>
+                                <li className="header-menu__item">
+                                    <a href="#safety" className="header-menu__link scroll-link">
+                                        Safety
                                     </a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div className="header-control f-center">
-                        <a href={PdfFile} className="header-link main-btn" target="_blank">
+                        <a href="/" className="header-link main-btn" >
                             Whitepaper
                         </a>
                         <div className="header-toggle">

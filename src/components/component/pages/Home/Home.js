@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <Invest />
-      <Affiliate />
+      {/* <Affiliate /> */}
       <Faq />
       <About />
       <Footer />
